@@ -1,1 +1,60 @@
+<!DOCTYPE html>
 
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Check</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+       
+    	<div class="container">
+            <h1 class='container-heading'><span class="heading_font">Diabetes Check</span></h1>
+           
+    	</div>
+
+       
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <label for="Pregnancies">Pregnancies : </label>
+                <input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+
+                <label for="Glucose">Glucose : </label>
+                <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+                <label for="BloodPressure">BloodPressure : </label>
+                <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+
+                <label for="SkinThickness">SkinThickness : </label>
+                <input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+
+                <label for="Insulin">Insulin : </label>
+                <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+
+                <label for="BMI">Height : </label>
+                <input class="form-input" type="text" name="height" placeholder="height"><br>
+
+                <label for="BMI">Weight : </label>
+                <input class="form-input" type="text" name="weight" placeholder="Weight"><br>
+
+                <label for="DiabetesPedigreeFunction"
+                >DiabetesPedigreeFunction :
+              </label>
+                <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+
+                <label for="Age">Age : </label>
+                <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 34"><br>
+
+              
+        		<input type="submit" class="my-cta-button" value="Test">
+        	</form>
+    	</div>
+
+       
+
+    </body>
+</html>
